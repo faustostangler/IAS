@@ -1,0 +1,45 @@
+services:
+  api:
+    build: .
+    image: ias:latest
+    container_name: ias_api
+    command: uvicorn ias.presentation.api:app --host 0.0.0.0 --port 8000
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+    env_file: .env
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - ias_network
+
+  worker:
+    build: .
+    image: ias:latest
+    container_name: ias_worker
+    command: python -m ias.main
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+    env_file: .env
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    networks:
+      - ias_network
+
+networks:
+  ias_network:
+    driver: bridge
+
+volumes:
+  data:

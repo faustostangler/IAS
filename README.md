@@ -6,7 +6,7 @@ Built with a focus on privacy and data sovereignty, the project eliminates relia
 
 This tool is optimized for Generative AI patterns, fitting the event-driven triggers and dynamic task execution models used in modern AI agent orchestration. By converting raw audio into a "machine-readable blueprint," it enables advanced MD Knowledge Base and automated documentation for technical and research-oriented environments.
 
-### Key Features
+## Key Features
 
 - **Local-First Architecture**: Runs entirely on-premises with no external API dependencies, ensuring data privacy and ownership.
 - **Automated Video Processing**: Extracts high-fidelity audio from YouTube video sources, preparing it for analysis.
@@ -14,4 +14,11 @@ This tool is optimized for Generative AI patterns, fitting the event-driven trig
 - **Structured Data Generation**: Transforms raw transcripts into semantically organized, structured, and machine-readable Markdown files using local LLMs.
 - **Agentic Obsidian Maintanance**: The system automatically organizes the generated Markdown files into Obsidian vaults, creating a structured knowledge base, keeping it updated with new information.
 - **Modular Design**: Clean Hexagonal Architecture ensures high maintainability and scalability.
+
+
+## Architecture
+We will structure the application as a Modular Monolith using Hexagonal Architecture. The pipeline traverses three distinct Bounded Contexts:
+- MediaIngestion: Responsible for validating URLs and extracting audio.
+- SpeechProcessing: Responsible for converting audio streams into raw text transcripts.
+- KnowledgeCompilation: Responsible for acting as the "AI Programmer" (using the Karpathy Method) to synthesize the raw transcript into structured Markdown nodes within the Obsidian Vault.
 
