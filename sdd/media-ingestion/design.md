@@ -22,7 +22,7 @@
 
 ## Main Flow
 1. **Initiation**: `IngestMediaUseCase` receives a URL and generates a `MediaId` (UUID v4). The domain operates exclusively on this internal ID. `use_cases.py:16` 🟢
-2. **Checkpoint Check**: System checks if an audio file associated with the source already exists in storage. 🔴 [Decisão Fausto]
+2. **Checkpoint Check**: System checks if an audio file associated with the source already exists in storage. 🔴 [Decisão User]
 3. **Entity Creation**: A `MediaSource` entity is initialized in `PENDING` state. `use_cases.py:17` 🟢
 3. **Status Update**: Entity state changes to `PROCESSING`. `use_cases.py:20` 🟢
 4. **Extraction Delegation**: The use case calls `_audio_extractor.extract_audio(source)`. `use_cases.py:24` 🟢

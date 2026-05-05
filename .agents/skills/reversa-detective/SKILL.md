@@ -31,12 +31,9 @@ O campo `doc_level` do state.json controla o que gerar:
 ## Processo
 
 ### 1. Arqueologia Git
-Analise o histórico de commits (`git log`):
-- Mensagens que revelam decisões de negócio ou técnicas
-- Commits de fix/hotfix — indicam comportamentos esperados
-- Grandes refatorações — indicam mudanças de requisitos
-- Reverts e seu motivo aparente
-- Use como fonte para ADRs retroativos
+A análise profunda do histórico Git foi movida para o agente **Historian** (`reversa-historian`), que executa a arqueologia temporal e análise de contribuidores.
+Nesta etapa, restrinja-se apenas a identificar padrões claros de regras de negócio ou decisões técnicas (ADRs retroativos) que estejam *evidentes no código atual* ou em *comentários do código*, sem necessidade de varrer o `git log` profundamente.
+Se o Historian ainda não rodou, pule a extração de histórico de commits detalhada.
 
 ### 2. Regras de negócio implícitas
 - Condicionais complexas com lógica de domínio

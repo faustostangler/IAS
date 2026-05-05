@@ -14,8 +14,8 @@ Responsible for transforming raw transcripts into structured, high-quality knowl
 - **Metadata Frontmatter**: Every node must include YAML frontmatter with `media_id` and `tags`. 🟢
 - **Immutable Status**: Compilation status must strictly follow the domain state machine. 🟢
 - **Local LLM usage**: Must use a local LLM adapter for privacy-preserving synthesis. 🟢
-- **Text Chunking**: For transcripts exceeding LLM context limits, the system must implement a chunking/Map-Reduce strategy. 🔴 [Decisão Fausto]
-- **Update Policy**: If a node with the same title exists in the vault, it should be updated/overwritten with the new synthesis. 🔴 [Decisão Fausto]
+- **Text Chunking**: For transcripts exceeding LLM context limits, the system must implement a chunking/Map-Reduce strategy. 🔴 [Decisão User]
+- **Update Policy**: If a node with the same title exists in the vault, it should be updated/overwritten with the new synthesis. 🔴 [Decisão User]
 
 ## Functional Requirements
 

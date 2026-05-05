@@ -83,6 +83,15 @@ O Reviewer pega os contratos do Writer e tenta furar: *"Isso é contradição. E
 
 ---
 
+## 📜 Historian — o cronista
+**Comando:** `/reversa-historian`
+
+O cronista chega depois que todos já trabalharam. Lê os relatórios de cada especialista, consulta os arquivos do cartório (Git) e escreve a história definitiva: quem construiu o quê, quando, por que mudou, e o que importa para quem vai reconstruir.
+
+> Use o Historian após o Reviewer. Ele gera o dossier executivo e a análise temporal do projeto — o documento que você entrega ao stakeholder ou ao time de migração.
+
+---
+
 ## 🖼️ Visor — o ilustrador forense
 **Comando:** `/reversa-visor`
 

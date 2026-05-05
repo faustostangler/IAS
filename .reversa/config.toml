@@ -6,7 +6,7 @@ name = "IAS"
 version = "1.0.0"
 
 [user]
-name = "Fausto"
+name = "User"
 chat_language = "en"
 doc_language = "English"
 

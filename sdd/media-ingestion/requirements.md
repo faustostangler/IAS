@@ -14,7 +14,7 @@ Responsible for retrieving raw media content from external sources (URLs) and ex
 - **State Integrity**: A media source must move to `PROCESSING` state before extraction starts and `COMPLETED` only after successful save. 🟢
 - **Fail-Fast**: Any extraction error must immediately move the entity to `FAILED` state to stop the pipeline. 🟢
 - **Local Storage Preference**: Extracted audio must be stored in a locally configured storage path. 🟢
-- **Checkpointing**: Before starting extraction, the system must check if the audio file already exists on disk to avoid redundant downloads. 🔴 [Decisão Fausto]
+- **Checkpointing**: Before starting extraction, the system must check if the audio file already exists on disk to avoid redundant downloads. 🔴 [Decisão User]
 
 ## Functional Requirements
 

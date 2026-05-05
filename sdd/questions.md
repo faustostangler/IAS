@@ -1,6 +1,6 @@
 # 🔴 Reversa: Questões de Validação Técnica
 
-Fausto, encontrei os seguintes pontos que precisam da sua validação para fechar o SDD com 100% de confiança. Por favor, preencha o campo **Resposta** de cada item.
+User, encontrei os seguintes pontos que precisam da sua validação para fechar o SDD com 100% de confiança. Por favor, preencha o campo **Resposta** de cada item.
 
 ---
 

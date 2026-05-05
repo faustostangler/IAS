@@ -30,7 +30,7 @@
 
 ## Lacunas Pendentes 🔴
 
-Não há lacunas críticas pendentes. Todas as 5 questões levantadas na `questions.md` foram respondidas e incorporadas às especificações como requisitos de design oficiais ("Decisões Fausto").
+Não há lacunas críticas pendentes. Todas as 5 questões levantadas na `questions.md` foram respondidas e incorporadas às especificações como requisitos de design oficiais ("Decisões User").
 
 ---
 

@@ -84,8 +84,8 @@ Se o contexto estiver se esgotando:
 
 Não espere o contexto estourar. Em marcos discretos do plano, ofereça uma pausa proativa para o usuário recomeçar limpo. Os marcos são:
 
-- Após cada agente concluído (Scout, Archaeologist, Detective, Architect, Writer, Reviewer e os agentes independentes) **nesta sessão**
-- Antes de iniciar um agente pesado quando o anterior já consumiu sessão longa (Archaeologist, Writer, Reviewer com revisão cruzada)
+- Após cada agente concluído (Scout, Archaeologist, Detective, Architect, Writer, Reviewer, Historian e os agentes independentes) **nesta sessão**
+- Antes de iniciar um agente pesado quando o anterior já consumiu sessão longa (Archaeologist, Writer, Reviewer com revisão cruzada, Historian)
 
 **🚫 Nunca ofereça este prompt logo após uma retomada (`/reversa` em sessão nova).** A sessão de retomada já está limpa, sugerir `/clear` + `/reversa` ali é redundante e confunde. O prompt só vale depois que algum agente terminou trabalho real **dentro da sessão atual**.
 

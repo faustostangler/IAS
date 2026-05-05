@@ -4,12 +4,12 @@
 As a researcher, I want to provide a YouTube URL and receive a structured Markdown note in my Obsidian vault, so that I can quickly reference and organize knowledge from video content without manual transcription.
 
 ## Persona
-- **Fausto**, a developer/researcher who uses Obsidian for personal knowledge management.
+- **User**, a developer/researcher who uses Obsidian for personal knowledge management.
 
 ## Flow: "The Knowledge Pipeline"
 
 ### 1. Ingestion
-- **Action**: Fausto submits a URL via CLI or API.
+- **Action**: User submits a URL via CLI or API.
 - **System**:
     - Validates the URL.
     - Downloads audio using `yt-dlp`.

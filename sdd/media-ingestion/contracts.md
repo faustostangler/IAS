@@ -33,7 +33,7 @@ The system integrates with YouTube via the `yt-dlp` library to extract high-qual
 `{STORAGE_PATH}/audio/`
 
 ### File Naming Convention
-`[media_id].mp3` (where `media_id` is the internal UUID v4). 🔴 [Decisão Fausto]
+`[media_id].mp3` (where `media_id` is the internal UUID v4). 🔴 [Decisão User]
 
 ### Access Patterns
 - **Write**: Sequential write during extraction.

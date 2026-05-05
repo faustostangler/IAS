@@ -13,7 +13,7 @@ Provides common abstractions, orchestration logic, and centralized configuration
 - **Sequential Pipeline Integrity**: The pipeline must stop immediately if any stage fails. 🟢
 - **Configuration Validation**: The system must fail-fast during startup if required environment variables are missing or invalid. 🟢
 - **Coupling Control**: Modules must not depend on each other directly; they interact through the shared orchestrator and domain entities. 🟢
-- **Sequential Queue**: The system must process only one URL at a time to ensure hardware (VRAM) stability. 🔴 [Decisão Fausto]
+- **Sequential Queue**: The system must process only one URL at a time to ensure hardware (VRAM) stability. 🔴 [Decisão User]
 
 ## Functional Requirements
 
