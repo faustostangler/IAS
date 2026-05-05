@@ -2,8 +2,8 @@ import os
 import json
 
 def main():
-    if not os.path.exists('_reversa_sdd'):
-        print(json.dumps({"error": "_reversa_sdd folder not found. Cannot consolidate."}))
+    if not os.path.exists('sdd'):
+        print(json.dumps({"error": "sdd folder not found. Cannot consolidate."}))
         return
         
     inventory = {
@@ -17,7 +17,7 @@ def main():
         "files": []
     }
     
-    for root, _, files in os.walk('_reversa_sdd'):
+    for root, _, files in os.walk('sdd'):
         # Ignore historian data folder
         if '.reversa_historian_data' in root:
             continue
@@ -39,15 +39,15 @@ def main():
                     pass
                     
                 inventory["files"].append({
-                    "path": os.path.relpath(path, '_reversa_sdd'),
+                    "path": os.path.relpath(path, 'sdd'),
                     "size": size
                 })
                 
-    os.makedirs('_reversa_sdd/.reversa_historian_data', exist_ok=True)
-    with open('_reversa_sdd/.reversa_historian_data/artifact_inventory.json', 'w') as f:
+    os.makedirs('sdd/.reversa_historian_data', exist_ok=True)
+    with open('sdd/.reversa_historian_data/artifact_inventory.json', 'w') as f:
         json.dump(inventory, f, indent=2)
         
-    print("Artifact inventory successfully created at _reversa_sdd/.reversa_historian_data/artifact_inventory.json")
+    print("Artifact inventory successfully created at sdd/.reversa_historian_data/artifact_inventory.json")
 
 if __name__ == '__main__':
     main()

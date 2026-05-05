@@ -47,6 +47,10 @@
 - [x] **Revisor** — Resolução de lacunas com o usuário ✅
 - [x] **Revisor** — Relatório de confiança final ✅
 
+## Fase 6: Consolidação 📜
+
+- [x] **Historian** — Arqueologia Git e Dossier Executivo ✅
+
 ---
 
 ## Agentes Independentes

@@ -67,11 +67,11 @@ def main():
     sorted_vol = sorted(data["volatility"].items(), key=lambda x: x[1], reverse=True)[:20]
     data["volatility"] = {k: v for k, v in sorted_vol}
     
-    os.makedirs('_reversa_sdd/.reversa_historian_data', exist_ok=True)
-    with open('_reversa_sdd/.reversa_historian_data/git_data.json', 'w') as f:
+    os.makedirs('sdd/.reversa_historian_data', exist_ok=True)
+    with open('sdd/.reversa_historian_data/git_data.json', 'w') as f:
         json.dump(data, f, indent=2)
         
-    print("Git data successfully extracted to _reversa_sdd/.reversa_historian_data/git_data.json")
+    print("Git data successfully extracted to sdd/.reversa_historian_data/git_data.json")
 
 if __name__ == '__main__':
     main()
