@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: Intelligent Audio Scriber API
+  description: API for automating media ingestion, transcription, and knowledge synthesis.
+  version: 1.0.0
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+  /process:
+    post:
+      summary: Trigger pipeline
+      description: Triggers the full IAS pipeline for a given URL in the background.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProcessRequest'
+      responses:
+        '202':
+          description: Processing started
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Processing started
+                  url:
+                    type: string
+                    example: https://www.youtube.com/watch?v=...
+components:
+  schemas:
+    ProcessRequest:
+      type: object
+      required:
+        - url
+      properties:
+        url:
+          type: string
+          description: The YouTube URL to process.
+          example: https://www.youtube.com/watch?v=aqz-KE-BPKQ
