@@ -1,7 +1,6 @@
 import pytest
-from unittest.mock import AsyncMock
 from ias.modules.media_ingestion.application.use_cases import IngestMediaUseCase
-from ias.modules.media_ingestion.domain.entities import MediaSource, MediaStatus, MediaId
+from ias.modules.media_ingestion.domain.entities import MediaSource, MediaStatus
 from ias.modules.media_ingestion.domain.ports import AudioExtractorPort
 
 class MockAudioExtractor(AudioExtractorPort):

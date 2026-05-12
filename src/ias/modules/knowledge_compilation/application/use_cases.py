@@ -1,5 +1,5 @@
 import uuid
-from ias.modules.knowledge_compilation.domain.entities import KnowledgeNode, NodeId, CompilationStatus
+from ias.modules.knowledge_compilation.domain.entities import KnowledgeNode, NodeId
 from ias.modules.knowledge_compilation.domain.ports import KnowledgeSynthesizerPort, VaultRepositoryPort
 
 class CompileKnowledgeUseCase:

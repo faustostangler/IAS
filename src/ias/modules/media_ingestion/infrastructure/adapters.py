@@ -40,7 +40,7 @@ class YoutubeAudioExtractor(AudioExtractorPort):
             audio_path = f"{self.output_dir}/{info['id']}.mp3"
             
             return source.complete(title=title, audio_path=audio_path)
-        except Exception as e:
+        except Exception:
             # In a real app, we would log the error "why" here
             return source.fail()
 

@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from typing import List
 from ias.modules.knowledge_compilation.domain.entities import KnowledgeNode
 
 class KnowledgeSynthesizerPort(ABC):

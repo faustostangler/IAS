@@ -1,6 +1,6 @@
 import pytest
 from ias.modules.knowledge_compilation.application.use_cases import CompileKnowledgeUseCase
-from ias.modules.knowledge_compilation.domain.entities import KnowledgeNode, CompilationStatus, NodeId
+from ias.modules.knowledge_compilation.domain.entities import KnowledgeNode, CompilationStatus
 from ias.modules.knowledge_compilation.domain.ports import KnowledgeSynthesizerPort, VaultRepositoryPort
 
 class MockSynthesizer(KnowledgeSynthesizerPort):

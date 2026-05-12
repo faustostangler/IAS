@@ -6,7 +6,7 @@ from collections import defaultdict
 def run_git(args):
     try:
         return subprocess.check_output(['git'] + args, stderr=subprocess.DEVNULL).decode('utf-8', errors='replace').strip()
-    except Exception as e:
+    except Exception:
         return ""
 
 def main():

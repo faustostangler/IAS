@@ -23,7 +23,6 @@ class ObsidianVaultRepository(VaultRepositoryPort):
         
         content_with_metadata = self._format_content(node)
         
-        import aiofiles
         async with aiofiles.open(file_path, mode='w', encoding='utf-8') as f:
             await f.write(content_with_metadata)
 

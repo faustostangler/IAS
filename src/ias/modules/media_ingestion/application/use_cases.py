@@ -1,5 +1,5 @@
 import uuid
-from ias.modules.media_ingestion.domain.entities import MediaSource, MediaId, MediaStatus
+from ias.modules.media_ingestion.domain.entities import MediaSource, MediaId
 from ias.modules.media_ingestion.domain.ports import AudioExtractorPort
 
 class IngestMediaUseCase:

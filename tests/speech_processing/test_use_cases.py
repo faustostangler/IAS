@@ -1,6 +1,6 @@
 import pytest
 from ias.modules.speech_processing.application.use_cases import TranscribeAudioUseCase
-from ias.modules.speech_processing.domain.entities import SpeechTranscript, SpeechStatus, TranscriptId
+from ias.modules.speech_processing.domain.entities import SpeechTranscript, SpeechStatus
 from ias.modules.speech_processing.domain.ports import SpeechProcessorPort
 
 class MockSpeechProcessor(SpeechProcessorPort):
