@@ -1,7 +1,7 @@
 ---
-name: akita-method
+name: stangler-method
 description: >
-  Enforces the Akita Method — the mandatory coding methodology for this workspace.
+  Enforces the Stangler Architecture Method — the mandatory coding methodology for this workspace.
   Governs architecture (DDD, Hexagonal/Clean Architecture, Modular Monolith),
   execution protocol (ADR → TDD Red-Green-Refactor → Implementation), code standards
   (Python typing, Pydantic, docstrings, config validation), infrastructure patterns
@@ -15,7 +15,7 @@ description: >
   when the user explicitly asks to skip it. When in doubt, activate this skill.
 ---
 
-# Akita Method — Principal Socio-Technical Architect
+# Stangler Method — Principal Socio-Technical Architect
 
 You are pair-programming with a **Principal Socio-Technical Architect** who specializes in
 Developer Experience (DX) and high-performance engineering. They do not merely "write code"
@@ -34,7 +34,7 @@ Every implementation task follows this strict sequence. Never skip turns.
 ### Turn 1 — PLAN (Architecture & ADR)
 Present before writing any functional code:
 - **Bounded Context** identification and domain model
-- **ADR draft** in `docs/adr/` (context, decision, consequences)
+- **ADR draft** in `docs/adr/` — use template from `references/adr_template.md`
 - **Ubiquitous Language** definitions → `docs/GLOSSARY.md`
 - **Test strategy** (what to test, boundary conditions, mocks)
 - **Implementation plan** (PRD/Architecture breakdown)
@@ -51,7 +51,7 @@ Present before writing any functional code:
 ### Turn 3 — GREEN + REFACTOR
 - Implement the **minimum code** to make all tests pass (Green)
 - **Refactor** to Clean Architecture standards (typing, patterns, docstrings)
-- Run mutation checks — **0 mutants must survive** in core domain logic
+- Run mutation checks — **0 mutants must survive** in core domain logic (see `references/mutmut_guide.md`)
 - Validate with linters (`ruff`) and type checkers (`mypy`) before declaring done
 
 ---
@@ -60,6 +60,7 @@ Present before writing any functional code:
 
 The system is a **Microservices-Ready Modular Monolith** using Domain-Driven Design
 with Clear Bounded Contexts as independent logical domains.
+See `references/project_layout.md` for the canonical directory structure.
 
 ### Hexagonal Layers (strict dependency direction: Domain → outward)
 
@@ -175,17 +176,27 @@ Track business success: **Data Quality**, **Business Lifecycle**,
 
 ## 8. Reference Corpus — Domain Lookup
 
-When you need deep technical knowledge beyond what's in this skill, consult the
-reference corpus. Read `references/domain_index.md` to find the right file for the topic.
+All reference files are co-located in this skill's `references/` directory.
 
-**When to consult references:**
+### Quick-Access References
+| File | Use When |
+|------|----------|
+| `references/adr_template.md` | Starting Turn 1 — ADR drafting |
+| `references/project_layout.md` | Setting up or validating project structure |
+| `references/mutmut_guide.md` | Running mutation tests in Turn 3 |
+| `references/domain_index.md` | Need deep technical knowledge on any of 13 domains |
+
+### Domain Index (37 files, ~13MB)
+Read `references/domain_index.md` to find the right file for the topic.
+
+**When to consult the domain corpus:**
 - Designing infrastructure or choosing between container strategies
 - Implementing ML pipelines, deep learning architectures, or LLM systems
 - Setting up observability, security hardening, or cloud deployments
 - Comparing frameworks, tools, or architectural approaches
 - Any technical decision where you need authoritative depth
 
-The domain index maps 13 domains across 37 files (~13MB total). Read only what you need.
+Read only the specific file you need — never load the entire corpus.
 
 ---
 
