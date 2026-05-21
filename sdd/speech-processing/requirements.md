@@ -21,6 +21,7 @@ Handles the transformation of audio content into textual transcripts using local
 | RF-01 | Audio Transcription | Must | Given a valid audio path, the system generates a full text transcript. |
 | RF-02 | Model Customization | Should | The system should allow selecting different Whisper model sizes (base, small, etc.) via config. |
 | RF-03 | Async Execution | Must | Transcription must run without blocking the main application flow. |
+| RF-04 | Checkpointing | Should | Skip transcription if a valid transcript already exists for the given media. |
 
 ## Non-Functional Requirements
 

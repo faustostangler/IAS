@@ -139,3 +139,8 @@ playlist 2.txt
 # Sensitive credentials - NEVER commit
 cookies.txt
 cookies_*.txt
+
+
+# docs references
+/docs/references
+docs/references

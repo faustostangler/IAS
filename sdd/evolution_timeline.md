@@ -16,12 +16,20 @@ A chronological narrative of the system's architectural and business evolution.
 - **[2026-05-05] SDD Generation**: First batch of System Design Documents for the core modules.
 - **[2026-05-05] ADR-0003 (Local-First AI)**: Decision to prioritize local processing for audio and knowledge, ensuring privacy and reducing latency.
 
-## Phase 3: Consolidation (Current)
+## Phase 3: Consolidation (May 2026)
 **Goal:** Finalize Discovery and prepare for implementation/migration.
 
 - **[2026-05-05] Historian Deployment**: Automated git history analysis and executive dossier generation.
-- **[Current] Discovery Handoff**: The project is now ready for the Migration or Reconstruction phase.
+- **[2026-05-05] Discovery Handoff**: The project is officially ready for the Migration or Reconstruction phase.
+
+## Phase 4: Expansion & Maintenance (May 2026 - Current)
+**Goal:** Refine agent logic, expand knowledge base, and optimize performance.
+
+- **[2026-05-12] Agent Skills Restructuring**: Deep overhaul of the `.agents/skills` directory, adding comprehensive reference documentation and testing skeletons.
+- **[2026-05-12] Knowledge Base Initialization**: Creation of the `DevOps & MLOps Specialist` knowledge repository.
+- **[2026-05-12] Codebase Optimization**: Refactoring of imports and update of `uv.lock` for deterministic dependency management.
 
 ## Future Outlook
 - **Migration Phase**: Transitioning from legacy specifications (if any) to the target architecture.
 - **Integration**: Expanding the shared kernel for better inter-module communication.
+- **Visual Analysis**: Activating the `Visor` agent for UI/UX mapping.

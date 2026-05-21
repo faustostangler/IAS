@@ -17,10 +17,10 @@
 ---
 
 ## Main Flow (The Pipeline)
-1. **Receive URL**: `process_url` receives the input. `orchestrator.py:23` 🟢
-2. **Ingest Stage**: Calls `self._ingest.execute(url)`. `orchestrator.py:28` 🟢
+1. **Queue Management**: Enforce strict sequential processing (1 URL at a time) via an internal lock/queue. (ADR 0005) 🟢 CONFIRMADO
+2. **Ingest Stage**: Calls `self._ingest.execute(url)`. Stage skips if audio already exists (Checkpointing). `orchestrator.py:28` 🟢
 3. **Verify Ingest**: Checks if status is `COMPLETED`. If not, stops. `orchestrator.py:29` 🟢
-4. **Transcribe Stage**: Calls `self._transcribe.execute(media.id, media.audio_path)`. `orchestrator.py:34` 🟢
+4. **Transcribe Stage**: Calls `self._transcribe.execute(media.id, media.audio_path)`. Stage skips if transcript exists. `orchestrator.py:34` 🟢
 5. **Verify Transcribe**: Checks if status is `COMPLETED`. If not, stops. `orchestrator.py:35` 🟢
 6. **Compile Stage**: Calls `self._compile.execute(media.id, media.title, transcript.text)`. `orchestrator.py:40` 🟢
 7. **Finalize**: Returns the compiled `KnowledgeNode`. `orchestrator.py:43` 🟢

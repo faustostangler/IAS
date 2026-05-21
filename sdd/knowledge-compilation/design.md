@@ -25,7 +25,7 @@
 1. **Initiation**: `CompileKnowledgeUseCase` receives media data and transcript. `use_cases.py:15` 🟢
 2. **Entity Creation**: `KnowledgeNode` initialized in `PENDING` state. `use_cases.py:18` 🟢
 3. **Synthesis Start**: Status updated to `COMPILING`. `use_cases.py:25` 🟢
-4. **Text Chunking**: If transcript length exceeds threshold, text is split into manageable chunks. 🔴 [Decisão User]
+4. **Text Chunking**: Transcript is divided into logical chunks to stay within LLM context limits (Map-Reduce strategy). 🟢 CONFIRMADO
 5. **AI Generation**: `OllamaSynthesizer` sends prompts for each chunk or full text to Ollama. `adapters.py:61` 🟢
 5. **Entity Update**: Node is updated with synthesized content and moves to `COMPLETED`. `use_cases.py:32` 🟢
 6. **Persistence**: `ObsidianVaultRepository` formats the node with frontmatter and writes to disk. `adapters.py:17` 🟢
@@ -61,5 +61,5 @@ The `KnowledgeNode` entity maintains:
 
 ## Risks and Gaps
 - 🟡 **Ollama Availability**: The system assumes Ollama is running on localhost; no healthcheck or dynamic discovery.
-- 🔴 **Token Limits**: Very long transcripts might exceed LLM context windows (no chunking logic observed).
-- 🔴 **Vault Conflict**: No logic to handle existing files with the same name (will be overwritten).
+- 🟢 **Token Limits**: Long transcripts are handled via Map-Reduce/Chunking (ADR 0007).
+- 🟢 **Vault Conflict**: Files are updated/edited instead of simple overwriting (ADR 0006).
